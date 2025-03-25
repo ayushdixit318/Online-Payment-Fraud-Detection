@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction</title>
+    <link rel="stylesheet" href="../static/intro_styles.css" />
+    <script src="../static/intro_script.js" defer></script>
+  </head>
+  <body>
+    <div class="sidebar">
+      <h2>Navigation</h2>
+      <ul>
+        <li><a href="#home" onclick="showSection('home')">Home Page</a></li>
+        <li>
+          <a href="#about" onclick="showSection('about')">About Application</a>
+        </li>
+        <li>
+          <a href="#model" onclick="showSection('model')"
+            >Model Building Procedure</a
+          >
+        </li>
+        <li>
+          <a href="#resources" onclick="showSection('resources')"
+            >Technical Resources</a
+          >
+        </li>
+        <li><a href="#contact" onclick="showSection('contact')">Contact</a></li>
+      </ul>
+      <button onclick="window.location.href='/home'">Run Application</button>
+    </div>
+    <div class="content">
+      <section id="home" class="section">
+        <h2>Home Page</h2>
+        <p>
+          Welcome to the Online Fraud Detection System.
+          This system is designed to help detect fraudulent activities in online
+          payment transactions.Our goal is to provide a reliable and efficient tool
+          for identifying potential fraud,ensuring the safety and security of online transactions. The Online
+          Payments Fraud Detection application is designed to predict fraudulent
+          transactions in online payment systems using advanced machine learning
+          techniques. With the growing risk of online payment fraud, this model
+          helps financial institutions and e-commerce platforms identify
+          suspicious transactions in real-time. Our solution leverages machine
+          learning models, such as XGBoost, to detect fraudulent transactions
+          based on a set of features that describe the transaction details. This
+          project focuses on: Real-time fraud detection by integrating machine
+          learning models into the payment processing system. Interactive
+          interface for users to input transaction details and receive immediate
+          feedback on transaction validity. Comprehensive feature engineering
+          and data reduction techniques to optimize model performance.
+        </p>
+      </section>
+      <section id="about" class="section">
+        <h2>About Application</h2>
+        <p>
+          This application leverages advanced machine learning models to analyze
+          transaction data and identify patterns indicative of fraudulent
+          behavior. By continuously learning from new data, the system improves
+          its accuracy and effectiveness over time.
+        </p>
+      </section>
+      <section id="model" class="section">
+        <h2>Model Building Procedure</h2>
+        <p>The model building procedure involves several steps:</p>
+        <ul>
+          <li>
+            Data Collection: Gathering transaction data from various sources.
+          </li>
+          <li>
+            Data Preprocessing: Cleaning and transforming the data to make it
+            suitable for modeling.
+          </li>
+          <li>
+            Feature Engineering: Creating new features that can help improve the
+            model's performance.
+          </li>
+          <li>
+            Model Training: Using machine learning algorithms to train the model
+            on the preprocessed data.
+          </li>
+          <li>
+            Model Evaluation: Assessing the model's performance using various
+            metrics and validation techniques.
+          </li>
+          <li>
+            Model Deployment: Integrating the trained model into the application
+            for real-time fraud detection.
+          </li>
+        </ul>
+      </section>
+      <section id="resources" class="section">
+        <h2>Technical Resources</h2>
+        <p>The following technical resources were used in this project:</p>
+        <ul>
+          <li>
+            Python: The primary programming language used for developing the
+            application.
+          </li>
+          <li>
+            Flask: A lightweight web framework for building the web application.
+          </li>
+          <li>
+            scikit-learn: A machine learning library used for model building and
+            evaluation.
+          </li>
+          <li>
+            Joblib: A library for serializing and deserializing Python objects,
+            used for saving and loading the model.
+          </li>
+          <li>
+            HTML/CSS/JavaScript: For creating the user interface and handling
+            client-side interactions.
+          </li>
+        </ul>
+      </section>
+      <section id="contact" class="section">
+        <h2>Contact</h2>
+        <p>
+          If you have any questions or need further assistance, please contact
+          us at:
+        </p>
+        <p>Devansh Singh<br>
+           Arpit Jain<br>
+          Ayush Dixit<br>
+          Archit Kumar<br>
+        </p>
+
+
+      </section>
+    </div>
+  </body>
+</html>

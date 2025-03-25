@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraud Detection</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Online Payment Fraud Detection</h1>
+    </header>
+    <main>
+        <div class="container">
+            <form action="/predict" method="post">
+                <h2>Predict Fraud</h2>
+                <div class="form-group">
+                    <label for="step">Step (Time Unit):</label>
+                    <input type="number" id="step" name="step" required>
+                </div>
+                <div class="form-group">
+                    <label for="type">Type (0: Payment, 1: Cash In, etc.):</label>
+                    <input type="number" id="type" name="type" required>
+                </div>
+                <div class="form-group">
+                    <label for="amount">Amount:</label>
+                    <input type="number" id="amount" name="amount" step="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label for="oldbalanceOrg">Old Balance (Origin):</label>
+                    <input type="number" id="oldbalanceOrg" name="oldbalanceOrg" step="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label for="newbalanceOrig">New Balance (Origin):</label>
+                    <input type="number" id="newbalanceOrig" name="newbalanceOrig" step="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label for="oldbalanceDest">Old Balance (Destination):</label>
+                    <input type="number" id="oldbalanceDest" name="oldbalanceDest" step="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label for="newbalanceDest">New Balance (Destination):</label>
+                    <input type="number" id="newbalanceDest" name="newbalanceDest" step="0.01" required>
+                </div>
+                <button type="submit">Predict</button>
+            </form>
+            {% if result %}
+                <h2>Prediction: {{ result }}</h2>
+                {% if helpline_info %}
+                    <div class="helpline-info">
+                        <p>{{ helpline_info.message }}</p>
+                        <ul>
+                            {% for link in helpline_info.links %}
+                                <li><a href="{{ link.url }}" target="_blank">{{ link.text }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
+            {% endif %}
+        </div>
+    </main>
+    <footer>
+    </footer>
+</body>
+</html>
